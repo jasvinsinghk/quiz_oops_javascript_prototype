@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="quiz.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="quizContainer" class="container">
+			<div class="title">Accolite Quiz</div>
+			<div id="question" class="question"></div>
+			<label class="option"><input id="choice_0" type="radio" name="option" value="0" /> <span id="option_0"></span></label>
+			<label class="option"><input id="choice_1" type="radio" name="option" value="1" /> <span id="option_1"></span></label>
+			<label class="option"><input id="choice_2" type="radio" name="option" value="2" /> <span id="option_2"></span></label>
+			<label class="option"><input id="choice_3" type="radio" name="option" value="3" /> <span id="option_3"></span></label>
+			<button id="prevButton" class="prev-btn hide">Prev Question</button>
+			<button id="nextButton" class="next-btn" disabled>Next Question</button>
+			<hr style="margin-top: 50px">
+			<footer>
+				<p id="progress">Question x of y</p>
+			</footer>
+		</div>
+		<div id="endContainer" class='hide'>
+			<div id="quizContainer" class="container">
+				<div class="title">Thanks for Playing!!!</div>
+			</div>
+		</div>
+		<script src="question.js"></script>
+		<script src="quiz.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
