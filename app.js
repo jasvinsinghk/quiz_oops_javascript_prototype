@@ -17,10 +17,11 @@ function populate() {
             radioElement.setAttribute("name", quiz.getQuestion().id)
             radioElement.setAttribute("value", quiz.getQuestion().id+"_"+i)
             element.innerHTML = choices[i];
+            if(quiz.isLast()){
+                document.getElementById("nextButton").innerHTML = "Submit";
+            }
             if(quiz.getQuestion().selectedAnswer){
-               console.log("callll")
                 var selectedOption = document.querySelector('input[value='+quiz.getQuestion().selectedAnswer+']')
-                console.log(selectedOption)
                 if(selectedOption) {
                     selectedOption.checked = true;
                     var next = document.getElementById("nextButton");

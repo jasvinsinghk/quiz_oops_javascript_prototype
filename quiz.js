@@ -8,13 +8,11 @@ Quiz.prototype.getQuestion = function() {
 }
 
 Quiz.prototype.answerSelected = function(answer) {
-    console.log("answer", answer)
     this.getQuestion().setSelectedOption(answer)
     
 }
 
 Quiz.prototype.next = function() {
-    console.log(this.getQuestion(),"--------")
     this.questionIndex++;
 }
 
@@ -31,4 +29,8 @@ Quiz.prototype.prev = function(answer) {
 }
 Quiz.prototype.isEnded = function() {
     return this.questionIndex === this.questions.length;
+}
+
+Quiz.prototype.isLast = function() {
+    return this.questionIndex === this.questions.length-1;
 }
